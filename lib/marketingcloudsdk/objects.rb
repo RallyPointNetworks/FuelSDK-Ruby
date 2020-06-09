@@ -472,16 +472,19 @@ module MarketingCloudSDK
 			end
 
 			def post
+				binding.pry
 				munge_properties self.properties
 				super
 			end
 
 			def patch
+				binding.pry
 				munge_properties self.properties
 				super
 			end
 
 			def put
+				binding.pry
 				munge_properties self.properties
 				super
 			end
@@ -528,6 +531,7 @@ module MarketingCloudSDK
 			end
 
 			def munge_properties d
+				binding.pry
 				if d.kind_of? Array
 					d.each do |o|
 						next if explicit_properties(o) && explicit_customer_key(o)

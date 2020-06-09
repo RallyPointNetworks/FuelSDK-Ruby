@@ -939,6 +939,7 @@ module MarketingCloudSDK
     end
 
     def post
+      binding.pry
       originalProps = @props
 
       if @props.is_a? Array then
@@ -1051,7 +1052,9 @@ module MarketingCloudSDK
         getCustomerKey
         originalProps = @props
         ## FIX THIS
+        binding.pry
         if @props.is_a? Array then
+          # yeah this needs help
 =begin
           multiRow = []
           @props.each { |currentDE|
@@ -1085,6 +1088,7 @@ module MarketingCloudSDK
       end
 
       def patch
+        binding.pry
         getCustomerKey
         currentFields = []
         currentProp = {}
