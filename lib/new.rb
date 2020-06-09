@@ -939,7 +939,6 @@ module MarketingCloudSDK
     end
 
     def post
-      binding.pry
       originalProps = @props
 
       if @props.is_a? Array then
